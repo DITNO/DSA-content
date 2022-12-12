@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int ithbit(int n,int i){
+    int mask = (1<<i);
+    return (n&mask)> 0? 1:0;
+}
+
+int main() {
+	// your code goes here
+    int i,n;
+    cin >> n>>i;
+    cout<<ithbit(n,i);
+	return 0;
+}
