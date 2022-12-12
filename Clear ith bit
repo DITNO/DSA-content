@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+
+void clearIthbit(int &n,int i){
+    int mask = ~(1<<i);
+    n = (n&mask);
+}
+
+int main() {
+	// your code goes here
+    int i,n;
+    cin >> n>>i;
+    clearIthbit(n,i);
+    
+    cout<<n;
+	return 0;
+}
+
+ 
