@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int firstocc(int arr[],int n, int k){
+    //base case
+    if(n==0){
+        return 0;
+    }
+    
+    //rec case
+    if(n!=-1){
+        int subindex = firstocc(arr+1,n-1,k);
+        return subindex+1;
+    }
+    return -1;
+}
+
+int main() {
+    
+    int arr[] = {1,2,3,4,5,7};
+    int n = sizeof(arr)/sizeof(int);
+    
+    cout<<firstocc(arr,n,7);
+    
+    return 0;
+}
