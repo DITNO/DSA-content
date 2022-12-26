@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int optmsq(int a,int n){
+    if(n==0){
+        return 1;
+    }
+    
+    int subprob = optmsq(a,n/2);
+    int sq = subprob*subprob;
+    if(n&1){
+        return a*sq;
+    }
+    return sq;
+}
+
+int main(){
+    int a,n;
+    cin>>a>>n;
+    cout<<optmsq(a,n);
+    return 0;
+}
