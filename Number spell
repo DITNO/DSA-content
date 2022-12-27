@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+string spell[]={"zero","one","two","three","four","five","six","seven","eight","nine"}
+
+void pspell(int n){
+if(n==0){
+return;
+}
+int last_bit=n%10;
+pspell(n/10);
+cout<<pspell[last_bit]<<" ";
+}
+void main(){
+//driver code
+return 0;
+}
