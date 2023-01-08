@@ -1,0 +1,54 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<vector>
+using namespace std;
+
+void merge (vector <int> arr, int s,int e){
+    int mid = (s+e)/2;
+    int i = s;
+    int j = mid+1;
+    
+    vector<int> temp;
+    
+    while(i<=mid and j<=e){
+        if(arr[i]<arr[j]){
+            temp.push_back(arr[i]);
+            i++;
+        }
+        else {
+            temp.push_back(arr[j]);
+            j++;
+        }
+    }
+    
+    while(i<=mid){
+        temp.push_back(arr[i++]);
+    }
+    while(j<=e){
+        temp.push_back(arr[j++]);
+    }
+    int k = 0;
+    for(int indx = s;indx<=e;indx++){
+        arr[i]=temp[k++];
+    }
+    return;
+}
+
+void mergesort(vector<int> array,int s,int e){
+    int mid = (s+e)/2;
+    mergesort(array,s,mid);
+    mergesort(array,mid+1,e);
+    return merge(array,s,e);
+}
+
+int main() {
+    // Write C++ code here
+    vector <int> array{4,6,2,5,1,0,9};
+    int s =0;
+    int e = array.size()-1;
+    mergesort(array,s,e);
+    for(auto x: array){
+        cout<<x<<",";
+    }
+    return 0;
+}
