@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-void merge (vector <int> arr, int s,int e){
+void merge (vector <int> &arr, int s,int e){
     int mid = (s+e)/2;
     int i = s;
     int j = mid+1;
@@ -29,12 +29,13 @@ void merge (vector <int> arr, int s,int e){
     }
     int k = 0;
     for(int indx = s;indx<=e;indx++){
-        arr[i]=temp[k++];
+        arr[indx]=temp[k++];
     }
     return;
 }
 
-void mergesort(vector<int> array,int s,int e){
+void mergesort(vector<int> &array,int s,int e){
+    if (s >= e) return;
     int mid = (s+e)/2;
     mergesort(array,s,mid);
     mergesort(array,mid+1,e);
@@ -47,7 +48,7 @@ int main() {
     int s =0;
     int e = array.size()-1;
     mergesort(array,s,e);
-    for(auto x: array){
+    for(auto &x: array){
         cout<<x<<",";
     }
     return 0;
