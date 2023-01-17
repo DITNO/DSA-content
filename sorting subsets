@@ -1,44 +1,40 @@
 // Online C++ compiler to run C++ program online
-#include <iostream>
-#include<vector>
+#include<iostream>
 #include<algorithm>
-
+#include<vector>
 using namespace std;
 
 bool compare(string a,string b){
     if(a.length()==b.length()){
         return a<b;
     }
-    return a.length()>b.length();
+    return a.length()<b.length();
 }
 
-void subset(char *input,char *output,int i,int j, vector<string> list){
-    if(input[i]=='\0'){
-        output[j]='\0';
-        string temp(output);
-        list.push_back(temp);
-        return;
-    }
-    output[j]=input[i];
-    subset(input,output,i+1,j+1,list);
-    subset(input,output,i+1,j,list);
-}
-
-int main() {
-    
-    char input[100];
-    char output[100];
-    vector<string> list;
-    
-    cin>>input;
-    
-    subset(input,output,0,0,list);
-    sort(list.begin(),list.end(),compare);
-    
-    for(auto x:list){
-        cout<<x<<",";
-    }
-    
-
-    return 0;
-}
+void subset(char *input,char *output,int i,int j,vector<string> &list){
+//base case
+if(input[i]=='\0'){
+  output[j]='\0';
+  string temp(output);
+  list.push_back(temp);
+      return;
+   }
+   //rec cases
+   //with the inital ith 
+   output[j]=input[i];
+   subset(input,output,i+1,j+1,list);
+   //exclusing the ith
+   subset(input,output,i+1,j,list);
+   }
+   int main(){
+   char input[100];
+   char output[100];
+   vector<string> list;
+   cin>>input;
+   subset(input,output,0,0,list);
+   sort(list.begin(),list.end(),compare);
+   for(auto x:list){
+       cout<<x<<",";
+   }
+   return 0;
+   }
