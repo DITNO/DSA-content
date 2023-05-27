@@ -1,6 +1,7 @@
 lecture 9 date-27 may
+.............................................................................................................................................
 topics - do while , switch ,
-
+..............................................................................................................................................
 do while loop
 
 the advantage of do while loop over for loop is that it executes the task first then checks the condion which makes it print value or execute task 
@@ -13,7 +14,7 @@ cout<<"hello";
 i++;
 }
 while(i<=-1);
-..................................................................................................................................................
+..............................................................................................................................................................................................................................................................................................
 //switch
 
 it saves the time from writing the long if-else codes.
@@ -29,13 +30,17 @@ break;
 default: cout<<"invalid character";
 }
 ...............................................................................................................................................
+...............................................................................................................................................
 ternary operator
 used for decreasing 
 age==40?cout<<"I'll buy a car":cout<<"I'll not buy a car";
 ...............................................................................................................................................
+...............................................................................................................................................
 functions
 
-function is a piece of code which does a paticular task which decreases the 
+function is a piece of code which does a paticular task which decreases the line fo codes
+use void when no return is present in the function
+function with return types can be printed with cout directly in main
 
 syntax - returntype nameof function ();
 eg-
@@ -43,8 +48,18 @@ void mohan(){
 cout<<"hi there";
 cout<<"hello";
 }
-
-
-
+...............................................................................................................................................
+...............................................................................................................................................
+forward declaration
+it is used to tell the main that the function is present and it is below it. It usually happens when the function is ritten below the main code.
+eg - 
+void maohan();
+int main(){
+...........
+return 0;
+}
+void mahan(){
+............../
+}
 
 
