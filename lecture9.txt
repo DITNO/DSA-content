@@ -1,0 +1,37 @@
+lecture 9 date-27 may
+topics - do while , switch ,
+
+do while loop
+
+the advantage of do while loop over for loop is that it executes the task first then checks the condion which makes it print value or execute task 
+for atleast once even if the conditions haven't met yet.
+
+synatx
+
+do{
+cout<<"hello";
+i++;
+}
+while(i<=-1);
+..................................................................................................................................................
+//switch
+
+it saves the time from writing the long if-else codes.
+the disadvantage of switch is that it can't check the ranged condition.
+
+switch(ch){
+case "a": cout<<"apple"<<endl;
+break;
+case "b": cout<<"boy"<<endl;
+break;
+case "c": cout<<"cat"<<endl;
+break;
+default: cout<<"invalid character";
+}
+...................................................................................................................................................
+ternary operator
+used for decreasing 
+age==40?cout<<"I'll buy a car":cout<<"I'll not buy a car";
+
+
+
