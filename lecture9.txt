@@ -28,10 +28,23 @@ case "c": cout<<"cat"<<endl;
 break;
 default: cout<<"invalid character";
 }
-...................................................................................................................................................
+...............................................................................................................................................
 ternary operator
 used for decreasing 
 age==40?cout<<"I'll buy a car":cout<<"I'll not buy a car";
+...............................................................................................................................................
+functions
+
+function is a piece of code which does a paticular task which decreases the 
+
+syntax - returntype nameof function ();
+eg-
+void mohan(){
+cout<<"hi there";
+cout<<"hello";
+}
+
+
 
 
 
