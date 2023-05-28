@@ -25,6 +25,17 @@ int main() {
     cout<<*(&ptr)<<endl;//dereferencing the ptr with another type
     cout<<**pptr<<endl;//double dereference to the value of a
     cout<<*(&a)<<endl;//double dereference to the value of a by another way
-    cout<<sizeof(**pptr);//derefering to int that is of size 4
+    cout<<sizeof(**pptr)<<endl;//derefering to int that is of size 4
+    //case of character
+    char ch = 'a';
+    cout<<&ch;
+    //making pointer of cahr
+    char *c = &ch;
+    //it'll still inflict the value at the bucket till we get null
+    cout<<c;
+    //fooling of complier
+    //this helps us to get the address of the char 
+    cout<<(void*)&ch<<endl;
+    //using void is the standard practice but we can use any other datatype like int,float,bool or double
     return 0;
 }
