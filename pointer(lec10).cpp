@@ -37,5 +37,23 @@ int main() {
     //this helps us to get the address of the char 
     cout<<(void*)&ch<<endl;
     //using void is the standard practice but we can use any other datatype like int,float,bool or double
+    //--------------------------------------------------------------------
+    //array in ptr
+    int arr[]={1,2,3,4};
+    cout<<&arr[0]<<endl;
+    cout<<arr<<endl;
+    //in case of array both the srting point and the array on cout will give out the starting address of the array
+    //--------------------------------------------------------------------
+    int x = 10;
+    int*xtr = &x;
+    cout<<xtr<<endl;
+    //addition in the pointer will give out the address + times of value type
+    cout<<xtr+1<<endl;
+    //10c + (1*4) = xtr+1 = 110
+    cout<<xtr+2<<endl;
+    //10c + (2*4) = xtr+2 = 114
+    cout<<xtr+3<<endl;
+    //10c + (3*4) = xtr+3 = 118
+    
     return 0;
 }
