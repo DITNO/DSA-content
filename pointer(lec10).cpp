@@ -20,5 +20,11 @@ int main() {
     int**pptr=&ptr;
     //printing the location or the address of &ptr
     cout<<pptr<<endl;
+    //getiing the value by dereferencing
+    cout<<*pptr<<endl;//dereferencing the ptr
+    cout<<*(&ptr)<<endl;//dereferencing the ptr with another type
+    cout<<**pptr<<endl;//double dereference to the value of a
+    cout<<*(&a)<<endl;//double dereference to the value of a by another way
+    cout<<sizeof(**pptr);//derefering to int that is of size 4
     return 0;
 }
