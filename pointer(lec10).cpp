@@ -54,6 +54,11 @@ int main() {
     //10c + (2*4) = xtr+2 = 114
     cout<<xtr+3<<endl;
     //10c + (3*4) = xtr+3 = 118
-    
+    //--------------------------------------------------------------------
+    int *qtr = NULL;
+    cout<<2*(*qtr)<<endl;
+    //on dereferencing it will give the segmentation fault.
+    cout<<(qtr)<<endl;
+    //It'll give out 0 as it is the memeory location at first.
     return 0;
 }
