@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int linear_search(int arr[], int n, int key){
+int binary_search(int arr[], int n, int key){
     int s =0;
     int e = n-1;
 
@@ -31,7 +31,7 @@ int main() {
     int n = sizeof(arr)/sizeof(int);
     int key;
     cin>>key;
-    int index = linear_search(arr,n,key);
+    int index = binary_search(arr,n,key);
     if(index!= -1)
     cout<<"the key is present at index "<<index<<endl;
     else {
